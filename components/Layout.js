@@ -6,8 +6,8 @@ import Footer from './ui/Footer';
 export default function Layout({ children, meta: pageMeta }) {
   const router = useRouter();
   const meta = {
-    title: 'Next.js Subscription Starter',
-    description: 'Brought to you by Vercel, Stripe, and Supabase.',
+    title: 'Coffee Stamper',
+    description: 'Stamper app - home of your cafe and',
     cardImage: '/og.png',
     ...pageMeta
   };
@@ -32,7 +32,7 @@ export default function Layout({ children, meta: pageMeta }) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.cardImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vercel" />
+        <meta name="twitter:site" content="@vitHoracek" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.cardImage} />

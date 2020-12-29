@@ -14,7 +14,7 @@ function Card({ title, description, footer, children }) {
         <p className="text-accents-5">{description}</p>
         {children}
       </div>
-      <div className="border-t border-accents-1 bg-primary-2 p-4 text-accents-3 rounded-b-md">
+      <div className="border-t border-accents-1 bg-primary-2 p-4 text-accents-7 rounded-b-md">
         {footer}
       </div>
     </div>
@@ -50,7 +50,7 @@ export default function Account() {
     }).format(subscription.prices.unit_amount / 100);
 
   return (
-    <section className="bg-black mb-32">
+    <section className="bg-primary mb-32">
       <div className="max-w-6xl mx-auto pt-8 sm:pt-24 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">

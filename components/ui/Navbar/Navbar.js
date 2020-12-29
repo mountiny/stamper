@@ -16,16 +16,27 @@ const Navbar = () => {
           <div className="flex flex-1 items-center">
             <Link href="/">
               <a className={s.logo} aria-label="Logo">
-                <Logo />
+                <Logo inverted={true} />
               </a>
             </Link>
             <nav className="space-x-2 ml-6 hidden lg:block">
-              <Link href="/">
-                <a className={s.link}>Pricing</a>
-              </Link>
-              <Link href="/account">
-                <a className={s.link}>Account</a>
-              </Link>
+                <Link href="/">
+                  <a className={s.link}>Home</a>
+                </Link>
+              {
+                !user && (
+                <Link href="/pricing">
+                  <a className={s.link}>Pricing</a>
+                </Link>
+                )
+              }
+              {
+                user && (
+                  <Link href="/account">
+                    <a className={s.link}>Account</a>
+                  </Link>
+                )
+              }
             </nav>
           </div>
 

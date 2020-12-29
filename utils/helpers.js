@@ -18,4 +18,24 @@ const toDateTime = (secs) => {
   return t;
 };
 
-export { getURL, postData, toDateTime };
+
+const getCoffeesStatus = (n) => {
+  let rep = n % 10
+
+  if (rep === 0) rep = 10
+
+  let dots = []
+
+  for (var i = 0; i < 10 ;i++) {
+    dots.push(
+      <div key={i} className="outer-ring justify-self-center rounded-full w-10 h-10 bg-primary flex justify-center items-center">
+        <div className={`inner-ring rounded-full w-5 h-5 ${i+1 <= rep && "bg-accents-7"}`}>
+        </div>
+      </div>
+    )
+  }
+
+  return dots
+} 
+
+export { getURL, postData, toDateTime, getCoffeesStatus };

@@ -11,11 +11,13 @@ const createCheckoutSession = async (req, res) => {
     try {
       const { data: user, error } = await supabaseAdmin.auth.api.getUser(token);
       if (error) throw error;
-
+      
       const customer = await createOrRetrieveCustomer({
         uuid: user.id,
         email: user.email
       });
+
+      
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],

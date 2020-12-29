@@ -7,3 +7,12 @@
     @apply scale-110;
   }
 }
+
+.logo {
+  @apply cursor-pointer transform duration-100 ease-in-out;
+
+  &:hover {
+    /* @apply shadow-md; */
+    transform: scale(1.1);
+  }
+}

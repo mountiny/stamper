@@ -11,6 +11,7 @@ const SignUp = () => {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [instagram, setInstagram] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', content: '' });
@@ -27,18 +28,12 @@ const SignUp = () => {
       setMessage({ type: 'error', content: error.message });
     } else {
       if (user) {
-        await supabase
-          .from('users')
-          .update({
-            // full_name: name,
-            cafe: false
-          })
-          .eq('id', user.id);
         const { data, error } = await supabase
-          .from('drinkers')
+          .from('cafes')
           .insert({
             id: user.id,
             name,
+            instagram
           });
         setUser(user);
       } else {
@@ -80,6 +75,7 @@ const SignUp = () => {
         <Input placeholder="Name" onChange={setName} />
         <Input type="email" placeholder="Email" onChange={setEmail} required />
         <Input type="password" placeholder="Password" onChange={setPassword} />
+        <Input type="text" placeholder="Instagram account" onChange={setInstagram} />
         <div className="pt-2 w-full flex flex-col">
           <Button
             variant="slim"
