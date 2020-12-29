@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="mx-auto max-w-8xl px-6 bg-primary-2">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary transition-colors duration-150 bg-primary-2">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-7 py-12 text-primary transition-colors duration-150 bg-primary-2">
         <div className="col-span-1 lg:col-span-2">
           <Link href="/">
             <a className="flex flex-initial items-center font-bold md:mr-24">
@@ -73,24 +73,10 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
-          <div className="flex space-x-6 items-center h-10">
-            <a
-              aria-label="Github Repository"
-              href="https://github.com/mountiny/stamper"
-              className={s.link}
-            >
-              <GitHub />
-            </a>
-          </div>
-        </div>
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
         <div className="flex items-center">
           <span className="text-primary">Made by&nbsp;</span>
-          <a href="https://www.mountiny.com" className="font-semibold" aria-label="Mountiny.com Link">
-            Mountiny /&nbsp;
-          </a>
           <a href="https://www.twitter.com/vitHoracek" className="font-semibold" aria-label="Vit horacek Twitter link">
             Vít Horáček
           </a>

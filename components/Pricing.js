@@ -39,7 +39,7 @@ export default function Pricing({ products }) {
 
   if (!products.length)
     return (
-      <section className="bg-primary">
+      <section className="bg-primary pb-16">
         <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center"></div>
           <p className="text-6xl font-extrabold text-white sm:text-center sm:text-6xl">
@@ -59,14 +59,20 @@ export default function Pricing({ products }) {
     );
 
   return (
-    <section className="bg-primary">
+    <section className="bg-primary pb-16">
       <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
             Pricing<br />
           </h1>
           <p className="mt-5 text-xl text-accents-6 sm:text-center sm:text-2xl max-w-2xl m-auto">
-          By using this app instead of unnecessary paper loyalty cards we all help our planet little step by step.
+          Use this app instead of unnecessary paper coffee cards.
+          </p>
+          <p className="mt-5 text-xl text-accents-6 sm:text-center sm:text-2xl max-w-2xl m-auto">
+          Ten out of ten turtles thank you.
+          </p>
+          <p className="mt-5 text-xl text-accents-6 sm:text-center sm:text-2xl max-w-2xl m-auto">
+          You get plus 10 karma points for helping the planet.
           </p>
           <p className="mt-5 text-xl text-accents-6 sm:text-center sm:text-2xl max-w-2xl m-auto">
           The app is being made by one <Link href="https://www.twitter.com/vitHoracek"><a className="font-extrabold text-white">developer</a></Link> studying at university.
@@ -128,7 +134,7 @@ export default function Pricing({ products }) {
                       {priceString}
                     </span>
                     <span className="text-base font-medium text-accents-8">
-                      /{billingInterval}
+                      &nbsp;/ {billingInterval}
                     </span>
                   </p>
                   <Button
@@ -148,7 +154,7 @@ export default function Pricing({ products }) {
             );
           })}
         </div>
-        
+
         {/* <div>
           <p className="mt-24 text-xs uppercase text-accents-7 text-center font-bold tracking-widest">
             Join these cafés in saving trees

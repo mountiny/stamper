@@ -2,8 +2,10 @@ import Link from 'next/link';
 import s from './Navbar.module.css';
 import Logo from '../../icons/Logo';
 import { useUser } from '../../UserContext';
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+  const router = useRouter()
   const { user, signOut } = useUser();
 
   return (
@@ -48,9 +50,15 @@ const Navbar = () => {
                 </a>
               </Link>
             ) : (
-              <Link href="/signin">
-                <a className={s.link}>Sign in</a>
-              </Link>
+              router.pathname !== "/signin" ? (
+                <Link href="/signin">
+                  <a className={s.link}>Sign in</a>
+                </Link>
+              ) : (
+                <Link href="/signup">
+                  <a className={s.link}>Sign up</a>
+                </Link>
+              )
             )}
           </div>
         </div>

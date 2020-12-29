@@ -73,7 +73,7 @@ export default function Index({ products }) {
         <Link href="/signup">
           <a>
             <div
-              className="mt-8 block w-full max-w-md mx-auto rounded-md py-4 px-6 text-2xl font-bold text-accents-2 text-center bg-accents-7 transition-colors duration-200 hover:bg-accents-8"
+              className="mt-8 block w-full max-w-md mx-auto rounded-md py-3 px-6 text-2xl font-bold text-accents-2 text-center bg-accents-8 transition-colors duration-200 hover:bg-accents-9"
               >
               Sign up!
             </div> 
@@ -95,7 +95,7 @@ export default function Index({ products }) {
         <Link href="/pricing">
           <a>
             <div
-              className="mt-8 block w-full max-w-md mx-auto rounded-md py-4 px-6 text-2xl font-bold text-accents-2 text-center bg-accents-7 transition-colors duration-200 hover:bg-accents-8"
+              className="mt-12 block w-full max-w-md mx-auto rounded-md py-3 px-6 text-2xl font-bold text-accents-2 text-center bg-accents-8 transition-colors duration-200 hover:bg-accents-9"
               >
               Checkout the plans!
             </div> 

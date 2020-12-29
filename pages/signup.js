@@ -60,10 +60,13 @@ const SignUp = () => {
   return (
     <form
       onSubmit={handleSignup}
-      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-64"
+      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-16 sm:my-64"
     >
-      <div className="flex justify-center pb-12 ">
-        <Logo width="64px" height="64px" />
+      <div className="flex justify-center flex-col items-center pb-12 ">
+        <Logo inverted={true} />
+        <div className="text-3xl pt-8 font-bold">
+          Coffee lover signup
+        </div>
       </div>
       <div className="flex flex-col space-y-4">
         {message.content && (
@@ -100,6 +103,21 @@ const SignUp = () => {
             </a>
           </Link>
         </span>
+
+        <span className="pt-12 text-center text-white text-xl">
+          Are you a café?
+        </span>
+        
+        <Link href="/signup-cafe">
+          <a>
+            <div
+              className="mt-2 block w-full max-w-md mx-auto rounded-md py-2 px-6 text-normal font-bold text-accents-1 text-center bg-accents-8 transition-colors duration-200 hover:bg-accents-9"
+              >
+              Signup here
+            </div> 
+          </a>
+        </Link>
+
       </div>
     </form>
   );

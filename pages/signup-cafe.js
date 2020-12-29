@@ -55,10 +55,13 @@ const SignUp = () => {
   return (
     <form
       onSubmit={handleSignup}
-      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-64"
+      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-16 sm:my-64"
     >
-      <div className="flex justify-center pb-12 ">
-        <Logo width="64px" height="64px" />
+      <div className="flex justify-center flex-col items-center pb-12 ">
+        <Logo inverted={true} />
+        <div className="text-3xl pt-8 font-bold">
+          Café signup
+        </div>
       </div>
       <div className="flex flex-col space-y-4">
         {message.content && (

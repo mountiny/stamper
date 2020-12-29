@@ -53,9 +53,12 @@ const SignIn = () => {
 
   if (!user)
     return (
-      <div className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-64">
-        <div className="flex justify-center pb-12 ">
-          <Logo width="64px" height="64px" />
+      <div className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-16 sm:my-64">
+        <div className="flex justify-center flex-col items-center pb-12 ">
+          <Logo inverted={true} />
+          <div className="text-3xl pt-8 font-bold">
+            Welcome back!
+          </div>
         </div>
         <div className="flex flex-col space-y-4">
           {message.content && (
